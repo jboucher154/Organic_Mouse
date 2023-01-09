@@ -13,11 +13,16 @@ ClipStudio
 
 ## Creators
 Shree Morphet
+
 Karita Korzard
+
 Jenny Boucher
+
 Music by : Nam Hee Kim 
+
 
 ## Usage
 
 HTML version of the game is available to play at:
+
 https://organicmouse.itch.io/organic-mouse
