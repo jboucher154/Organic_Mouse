@@ -1,0 +1,769 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://src/Levels/level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/OG_assets/audio/rat_game_evil.wav" type="AudioStream" id=2]
+[ext_resource path="res://Bench.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/OG_assets/leaf.png" type="Texture" id=4]
+[ext_resource path="res://assets/OG_assets/lab_bench.png" type="Texture" id=5]
+[ext_resource path="res://assets/OG_assets/grassplatforms2.png" type="Texture" id=6]
+[ext_resource path="res://assets/OG_assets/bg_lab.png" type="Texture" id=7]
+[ext_resource path="res://src/fruit_collect.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/organ_collect.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Levels/Lab_final.gd" type="Script" id=10]
+[ext_resource path="res://src/Levels/stump.gd" type="Script" id=11]
+[ext_resource path="res://assets/OG_assets/stump_door.png" type="Texture" id=12]
+[ext_resource path="res://src/HUD.tres" type="DynamicFontData" id=13]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 233.5, 12.6585 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 85.5, 11 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 91.4899, 8.87575 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 9876, 159 )
+
+[sub_resource type="CapsuleShape2D" id=7]
+radius = 50.2211
+height = 125.916
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 198.545, 13.051 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 271.03, 7.9142 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 59, 11 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 177, 13.5 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 20.5, 412.75 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 185.104, 16.5 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 153.008, 10.852 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 195.25, 19.5 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 131.5, 9.75 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 426.75, 22 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 153.632, 9.20724 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 152.5, 2273 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 474, 2105.75 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 138.25, 20.75 )
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 23, 163.5 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 98.7642, 784.428 )
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 268, 16.5 )
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 91, 9 )
+
+[sub_resource type="TileSet" id=1]
+0/name = "grassplatforms2.png 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 384, 128, 288, 384 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "grassplatforms2.png 1"
+1/texture = ExtResource( 6 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 23, 23, 134, 538 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "grassplatforms2.png 2"
+2/texture = ExtResource( 6 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 208, 418, 61, 128 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "grassplatforms2.png 3"
+3/texture = ExtResource( 6 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 512, 256, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "grassplatforms2.png 4"
+4/texture = ExtResource( 6 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 384, 128, 288, 160 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+
+[sub_resource type="DynamicFont" id=10]
+size = 25
+outline_color = Color( 0.0235294, 0.0235294, 0.0235294, 1 )
+font_data = ExtResource( 13 )
+
+[sub_resource type="CapsuleShape2D" id=27]
+radius = 80.0
+height = 18.0
+
+[node name="Lab_final" instance=ExtResource( 1 )]
+script = ExtResource( 10 )
+
+[node name="Main_player" parent="." index="0"]
+position = Vector2( 279, 758 )
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Main_player" index="2"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="1"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
+position = Vector2( 600, -528 )
+scale = Vector2( 1.45461, 1.47917 )
+texture = ExtResource( 7 )
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 1366, 768 )
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="1"]
+position = Vector2( 2086, -664 )
+scale = Vector2( 1.45461, 1.47917 )
+texture = ExtResource( 7 )
+offset = Vector2( 343.735, 90.1406 )
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 1366, 768 )
+
+[node name="Sprite4" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="2"]
+position = Vector2( 2085, 472 )
+scale = Vector2( 1.45461, 1.47917 )
+texture = ExtResource( 7 )
+offset = Vector2( 343.735, 90.1406 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1366, 768 )
+
+[node name="Sprite5" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="3"]
+position = Vector2( 99, 472 )
+scale = Vector2( 1.45461, 1.47917 )
+texture = ExtResource( 7 )
+offset = Vector2( 343.735, 90.1406 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1366, 768 )
+
+[node name="Sprite6" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="4"]
+position = Vector2( 4570, -529 )
+scale = Vector2( 1.45461, 1.47917 )
+texture = ExtResource( 7 )
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 1366, 768 )
+
+[node name="Sprite7" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="5"]
+position = Vector2( 6053.5, -678.332 )
+scale = Vector2( 1.45461, 1.47917 )
+texture = ExtResource( 7 )
+offset = Vector2( 343.735, 90.1406 )
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 1366, 768 )
+
+[node name="Sprite8" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="6"]
+position = Vector2( 4569, 606 )
+scale = Vector2( 1.45461, 1.47917 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1366, 768 )
+
+[node name="Sprite9" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="7"]
+position = Vector2( 6029.5, 431.668 )
+scale = Vector2( 1.45461, 1.47917 )
+texture = ExtResource( 7 )
+offset = Vector2( 343.735, 90.1406 )
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 1366, 768 )
+
+[node name="Sprite10" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="8"]
+position = Vector2( 601, -1657 )
+scale = Vector2( 1.45461, 1.47917 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1366, 768 )
+
+[node name="Sprite11" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="9"]
+position = Vector2( 2586, -1649 )
+scale = Vector2( 1.45461, 1.47917 )
+texture = ExtResource( 7 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 1366, 768 )
+
+[node name="Sprite12" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="10"]
+position = Vector2( 4571, -1649 )
+scale = Vector2( 1.45461, 1.47917 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1366, 768 )
+
+[node name="Bench" parent="." index="2" instance=ExtResource( 3 )]
+show_behind_parent = true
+position = Vector2( -708, 89 )
+
+[node name="Sprite" type="Sprite" parent="Bench" index="1"]
+position = Vector2( 1247, 797 )
+rotation = 0.297829
+texture = ExtResource( 4 )
+offset = Vector2( 102, 40 )
+
+[node name="Sprite2" type="Sprite" parent="Bench" index="2"]
+position = Vector2( 1843, 765 )
+scale = Vector2( 4.84599, 2.57459 )
+texture = ExtResource( 4 )
+offset = Vector2( 102, 40 )
+
+[node name="Sprite3" type="Sprite" parent="Bench" index="3"]
+position = Vector2( 3284, 683 )
+scale = Vector2( 4.84599, 2.57459 )
+texture = ExtResource( 4 )
+offset = Vector2( 102, 40 )
+
+[node name="Bench2" parent="." index="3" instance=ExtResource( 3 )]
+show_behind_parent = true
+position = Vector2( -2583, 436 )
+rotation = -0.00662065
+scale = Vector2( 4.84611, 0.637616 )
+
+[node name="Sprite" type="Sprite" parent="Bench2" index="1"]
+position = Vector2( 1043.41, 217.555 )
+scale = Vector2( 0.161533, 1.22874 )
+texture = ExtResource( 4 )
+offset = Vector2( 102, 40 )
+
+[node name="Sprite2" type="Sprite" parent="Bench2" index="2"]
+position = Vector2( 507.118, -935.598 )
+rotation = 1.57013
+scale = Vector2( 18.6227, 2.40505 )
+texture = ExtResource( 4 )
+offset = Vector2( 102, 40 )
+
+[node name="Sprite3" type="Sprite" parent="Bench2" index="3"]
+position = Vector2( 1818.34, 3314.13 )
+scale = Vector2( -0.488157, 119.565 )
+texture = ExtResource( 5 )
+
+[node name="Bench3_dontmove" parent="." index="4" instance=ExtResource( 3 )]
+show_behind_parent = true
+position = Vector2( 272, -462 )
+rotation = 0.0127598
+
+[node name="Sprite" type="Sprite" parent="Bench3_dontmove" index="1"]
+position = Vector2( 4637, 1216 )
+texture = ExtResource( 4 )
+offset = Vector2( 102, 40 )
+
+[node name="Sprite2" type="Sprite" parent="Bench3_dontmove" index="2"]
+position = Vector2( 3830.68, 1919.24 )
+rotation = 3.20908
+scale = Vector2( 10.104, 7.00082 )
+texture = ExtResource( 4 )
+offset = Vector2( 102, 40 )
+
+[node name="Sprite3" type="Sprite" parent="Bench3_dontmove" index="3"]
+position = Vector2( -551.608, 670.717 )
+scale = Vector2( 1.38041, 1 )
+texture = ExtResource( 4 )
+offset = Vector2( 102, 40 )
+
+[node name="Sprite4" type="Sprite" parent="Bench3_dontmove" index="4"]
+position = Vector2( -404.108, -785.559 )
+rotation = 1.6594
+scale = Vector2( 5.37084, 7.044 )
+texture = ExtResource( 4 )
+offset = Vector2( 102, 40 )
+
+[node name="Sprite5" type="Sprite" parent="Bench3_dontmove" index="5"]
+position = Vector2( 1531.09, 467.502 )
+texture = ExtResource( 4 )
+
+[node name="Sprite6" type="Sprite" parent="Bench3_dontmove" index="6"]
+position = Vector2( 4957.2, 1320.12 )
+scale = Vector2( -1.48855, 0.664031 )
+texture = ExtResource( 4 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="5"]
+stream = ExtResource( 2 )
+autoplay = true
+
+[node name="Bench4" parent="." index="6" instance=ExtResource( 3 )]
+show_behind_parent = true
+position = Vector2( -2583, 436 )
+rotation = -0.00662065
+scale = Vector2( 4.84611, 0.637616 )
+
+[node name="Sprite" type="Sprite" parent="Bench4" index="1"]
+position = Vector2( 1043.41, 217.555 )
+scale = Vector2( 0.161533, 1.22874 )
+texture = ExtResource( 4 )
+offset = Vector2( 102, 40 )
+
+[node name="Sprite2" type="Sprite" parent="Bench4" index="2"]
+position = Vector2( 507.118, -935.598 )
+rotation = 1.57013
+scale = Vector2( 18.6227, 2.40505 )
+texture = ExtResource( 4 )
+offset = Vector2( 102, 40 )
+
+[node name="Sprite3" type="Sprite" parent="Bench4" index="3"]
+position = Vector2( 1818.34, 3314.13 )
+scale = Vector2( -0.488157, 119.565 )
+texture = ExtResource( 5 )
+
+[node name="Bench3" parent="." index="7" instance=ExtResource( 3 )]
+show_behind_parent = true
+position = Vector2( -708, 89 )
+
+[node name="Sprite" type="Sprite" parent="Bench3" index="1"]
+position = Vector2( 1247, 797 )
+rotation = 0.297829
+texture = ExtResource( 4 )
+offset = Vector2( 102, 40 )
+
+[node name="Sprite2" type="Sprite" parent="Bench3" index="2"]
+position = Vector2( 1843, 765 )
+scale = Vector2( 4.84599, 2.57459 )
+texture = ExtResource( 4 )
+offset = Vector2( 102, 40 )
+
+[node name="Sprite3" type="Sprite" parent="Bench3" index="3"]
+position = Vector2( 4602, 751 )
+scale = Vector2( 4.84599, 2.57459 )
+texture = ExtResource( 4 )
+offset = Vector2( 102, 40 )
+
+[node name="Bench3_dontmove2" parent="." index="8" instance=ExtResource( 3 )]
+show_behind_parent = true
+position = Vector2( 272, -462 )
+rotation = 0.0127598
+
+[node name="Sprite" type="Sprite" parent="Bench3_dontmove2" index="1"]
+position = Vector2( 4637, 1216 )
+texture = ExtResource( 4 )
+offset = Vector2( 102, 40 )
+
+[node name="Sprite2" type="Sprite" parent="Bench3_dontmove2" index="2"]
+position = Vector2( 4483.4, 1958.1 )
+rotation = 3.20908
+scale = Vector2( 12.097, 7.00082 )
+texture = ExtResource( 4 )
+offset = Vector2( 102, 40 )
+
+[node name="Sprite3" type="Sprite" parent="Bench3_dontmove2" index="3"]
+position = Vector2( -551.608, 670.717 )
+scale = Vector2( 1.38041, 1 )
+texture = ExtResource( 4 )
+offset = Vector2( 102, 40 )
+
+[node name="Sprite4" type="Sprite" parent="Bench3_dontmove2" index="4"]
+position = Vector2( -404.108, -785.559 )
+rotation = 1.6594
+scale = Vector2( 5.37084, 7.044 )
+texture = ExtResource( 4 )
+offset = Vector2( 102, 40 )
+
+[node name="Sprite5" type="Sprite" parent="Bench3_dontmove2" index="5"]
+position = Vector2( 1531.09, 467.502 )
+texture = ExtResource( 4 )
+
+[node name="Sprite6" type="Sprite" parent="Bench3_dontmove2" index="6"]
+position = Vector2( 4974.12, 1357.16 )
+scale = Vector2( -1.87524, 1.07703 )
+texture = ExtResource( 4 )
+
+[node name="Sprite7" type="Sprite" parent="Bench3_dontmove2" index="7"]
+position = Vector2( 393.071, 577.686 )
+rotation = -3.09796
+scale = Vector2( 1.38041, 1 )
+texture = ExtResource( 4 )
+offset = Vector2( 102, 40 )
+
+[node name="Bench5" parent="." index="9" instance=ExtResource( 3 )]
+show_behind_parent = true
+position = Vector2( 3940, -1238 )
+
+[node name="Bench6" parent="." index="10" instance=ExtResource( 3 )]
+show_behind_parent = true
+position = Vector2( 3990, -288 )
+
+[node name="Bench7" parent="." index="11" instance=ExtResource( 3 )]
+show_behind_parent = true
+position = Vector2( 4764, -400 )
+scale = Vector2( 0.440219, 0.971706 )
+
+[node name="Bench8" parent="." index="12" instance=ExtResource( 3 )]
+show_behind_parent = true
+position = Vector2( 4764, -584 )
+scale = Vector2( 0.440219, 0.971706 )
+
+[node name="Bench9" parent="." index="13" instance=ExtResource( 3 )]
+show_behind_parent = true
+position = Vector2( 1953, -1124 )
+scale = Vector2( 0.440219, 0.971706 )
+
+[node name="Bench10" parent="." index="14" instance=ExtResource( 3 )]
+show_behind_parent = true
+position = Vector2( -288, -1213 )
+scale = Vector2( 0.440219, 0.971706 )
+
+[node name="Sprite" type="Sprite" parent="Bench10" index="1"]
+position = Vector2( 261.234, 1059.99 )
+scale = Vector2( 3.46125, 1.24625 )
+texture = ExtResource( 4 )
+
+[node name="Bench11" parent="." index="15" instance=ExtResource( 3 )]
+show_behind_parent = true
+position = Vector2( 2777, -569 )
+scale = Vector2( 0.704203, 1.12811 )
+
+[node name="Bench12" parent="." index="16" instance=ExtResource( 3 )]
+show_behind_parent = true
+position = Vector2( 397, -1596 )
+scale = Vector2( 0.704203, 1.12811 )
+
+[node name="Bench13" parent="." index="17" instance=ExtResource( 3 )]
+show_behind_parent = true
+position = Vector2( 1730, -1896 )
+scale = Vector2( 0.704203, 1.12811 )
+
+[node name="Bench14" parent="." index="18" instance=ExtResource( 3 )]
+show_behind_parent = true
+position = Vector2( 3030, -1601 )
+scale = Vector2( 0.704203, 1.12811 )
+
+[node name="Organ7" parent="." index="19" instance=ExtResource( 9 )]
+position = Vector2( 2314, -420 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="StaticBody2D" parent="." index="20"]
+position = Vector2( 2314, -420 )
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2( 1992, 144 )
+rotation = -0.0907119
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="Area2D" index="1"]
+position = Vector2( -633, -565 )
+rotation = 0.0724135
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="Area2D" index="2"]
+position = Vector2( 1379, -266 )
+rotation = -0.0024843
+shape = SubResource( 5 )
+one_way_collision = true
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="Area2D" index="3"]
+position = Vector2( 2335, 245 )
+rotation = -0.0024843
+shape = SubResource( 5 )
+one_way_collision = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="4"]
+position = Vector2( -1487, 1501 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" index="5"]
+position = Vector2( -1703, 1366 )
+rotation = 5.00959
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D" index="6"]
+position = Vector2( -2432.89, 651.669 )
+rotation = 0.0458655
+shape = SubResource( 8 )
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D" index="7"]
+position = Vector2( -2451.9, 224.459 )
+rotation = -3.13846
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D" index="8"]
+position = Vector2( -2266, -340 )
+shape = SubResource( 11 )
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D" index="9"]
+position = Vector2( -2405, -560.5 )
+shape = SubResource( 12 )
+one_way_collision = true
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D" index="10"]
+position = Vector2( -682.5, 883.75 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Area2D" index="11"]
+position = Vector2( -499, 454 )
+rotation = -0.0828603
+shape = SubResource( 14 )
+one_way_collision = true
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Area2D" index="12"]
+position = Vector2( 237.847, 1000.55 )
+rotation = -0.126598
+shape = SubResource( 15 )
+one_way_collision = true
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Area2D" index="13"]
+position = Vector2( 2907.25, -427.5 )
+shape = SubResource( 16 )
+one_way_collision = true
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Area2D" index="14"]
+position = Vector2( 256, 103 )
+rotation = -0.176882
+shape = SubResource( 17 )
+one_way_collision = true
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Area2D" index="15"]
+position = Vector2( -478.75, 125 )
+shape = SubResource( 18 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Area2D" index="16"]
+position = Vector2( -1042.97, 95.456 )
+rotation = 0.13732
+shape = SubResource( 19 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Area2D" index="17"]
+position = Vector2( -2900.5, -900 )
+shape = SubResource( 20 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Area2D" index="18"]
+position = Vector2( 3519, -712.25 )
+shape = SubResource( 21 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Area2D" index="19"]
+position = Vector2( -862, -187.25 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Area2D" index="20"]
+position = Vector2( -750, -51.5 )
+shape = SubResource( 23 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Area2D" index="21"]
+position = Vector2( -2760, 735 )
+rotation = -0.252213
+shape = SubResource( 24 )
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Area2D" index="22"]
+position = Vector2( -2575, -1226 )
+shape = SubResource( 25 )
+one_way_collision = true
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Area2D" index="23"]
+position = Vector2( -1466, 921 )
+shape = SubResource( 26 )
+one_way_collision = true
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Area2D" index="24"]
+position = Vector2( -1788, 488 )
+rotation = -0.0139626
+shape = SubResource( 8 )
+one_way_collision = true
+
+[node name="tilemap_front" type="TileMap" parent="." index="21"]
+tile_set = SubResource( 1 )
+format = 1
+tile_data = PoolIntArray( -2228233, 536870913, 0, -1703944, -1610612735, 0, -1310644, -2147483647, 0, -983044, -1610612736, 0, -1048552, 0, 0, -1048497, -2147483648, 0, -917428, -2147483647, 0, -720875, 2, 0, -720872, 536870914, 0, -655340, -1610612734, 0, -655338, -536870910, 0, -589800, 2, 0, -524264, 2, 0, -393199, -1073741823, 0, -393192, 2, 0, -393182, -536870911, 0, -327658, -536870910, 0, -327656, -536870910, 0, -327654, -536870910, 0, -327652, -536870910, 0, -327650, -536870910, 0, -327648, -536870910, 0, -327620, -1073741822, 0, -327618, -536870910, 0, -327617, -536870911, 0, -262074, 1073741828, 0, -131048, 536870913, 0, 458745, 1, 0, 393227, 1610612740, 0, 393241, 536870914, 0, 393252, 536870913, 0, 524313, 536870914, 0, 655385, 536870914, 0, 786457, 536870914, 0, 852046, -1073741823, 0 )
+
+[node name="Text_box" type="ColorRect" parent="." index="22"]
+margin_left = 48.0
+margin_top = 414.0
+margin_right = 1048.0
+margin_bottom = 564.0
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 3
+color = Color( 0.85098, 0.839216, 0.85098, 0.678431 )
+
+[node name="Label" type="Label" parent="." index="23"]
+margin_left = 61.0
+margin_top = 436.0
+margin_right = 1013.0
+margin_bottom = 553.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "I see you've embraced science and experimentation. 
+It now fuels your soul.
+ You better gather enough organs to ensure you can continue this career. 
+No going back now."
+align = 1
+
+[node name="Timer" type="Timer" parent="." index="24"]
+wait_time = 10.0
+autostart = true
+
+[node name="stump" type="Area2D" parent="." index="25"]
+show_behind_parent = true
+position = Vector2( 2890, 247 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SpringOut" type="Sprite" parent="stump" index="0"]
+position = Vector2( 2203, -950 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump" index="1"]
+position = Vector2( 2175, -809 )
+shape = SubResource( 27 )
+
+[node name="Camera2D" type="Camera2D" parent="." index="26"]
+position = Vector2( 279, 758 )
+offset = Vector2( 0, -200 )
+current = true
+limit_left = -500
+limit_top = -1400
+limit_right = 5600
+limit_bottom = 1200
+smoothing_enabled = true
+offset_h = 0.2
+offset_v = 0.2
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="Organ8" parent="." index="27" instance=ExtResource( 9 )]
+position = Vector2( 1404, -421 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Organ9" parent="." index="28" instance=ExtResource( 9 )]
+position = Vector2( 161, -529 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Organ10" parent="." index="29" instance=ExtResource( 9 )]
+position = Vector2( 3763, -785 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Organ11" parent="." index="30" instance=ExtResource( 9 )]
+position = Vector2( 2405, -1084 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Organ12" parent="." index="31" instance=ExtResource( 9 )]
+position = Vector2( 1126, -770 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Organ13" parent="." index="32" instance=ExtResource( 9 )]
+position = Vector2( 1857, 776 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="fruit" parent="." index="33" instance=ExtResource( 8 )]
+position = Vector2( 1851, 577 )
+
+[node name="fruit2" parent="." index="34" instance=ExtResource( 8 )]
+position = Vector2( -74, 152 )
+
+[node name="fruit3" parent="." index="35" instance=ExtResource( 8 )]
+position = Vector2( 4812, 429 )
+
+[node name="fruit4" parent="." index="36" instance=ExtResource( 8 )]
+position = Vector2( 5183, -1047 )
+
+[node name="fruit5" parent="." index="37" instance=ExtResource( 8 )]
+position = Vector2( 3535, 753 )
+
+[node name="Organ14" parent="." index="38" instance=ExtResource( 9 )]
+position = Vector2( 3476, 239 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[connection signal="item_collected" from="Organ7" to="Organ7" method="_on_Organ_item_collected"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="stump" to="stump" method="_on_stump_body_entered"]
+[connection signal="item_collected" from="Organ8" to="Organ8" method="_on_Organ_item_collected"]
+[connection signal="item_collected" from="Organ9" to="Organ9" method="_on_Organ_item_collected"]
+[connection signal="item_collected" from="Organ10" to="Organ10" method="_on_Organ_item_collected"]
+[connection signal="item_collected" from="Organ11" to="Organ11" method="_on_Organ_item_collected"]
+[connection signal="item_collected" from="Organ12" to="Organ12" method="_on_Organ_item_collected"]
+[connection signal="item_collected" from="Organ13" to="Organ13" method="_on_Organ_item_collected"]
+[connection signal="item_collected" from="Organ14" to="Organ14" method="_on_Organ_item_collected"]

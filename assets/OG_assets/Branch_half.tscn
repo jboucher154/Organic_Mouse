@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/branch_half.png-7ebac5ff0689cdb07f40a0b6b0158d12.stex"
+
+[sub_resource type="SegmentShape2D" id=1]
+a = Vector2( 331, 228 )
+b = Vector2( 646, 188 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 656, 629 )
+texture = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 213, 410 )
+shape = SubResource( 1 )
+one_way_collision = true

@@ -1,0 +1,552 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://src/Levels/level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/OG_assets/grassplatforms.png" type="Texture" id=2]
+[ext_resource path="res://src/Levels/level1.gd" type="Script" id=3]
+[ext_resource path="res://src/organ_collect.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/fruit_collect.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/OG_assets/bg_start.png" type="Texture" id=6]
+[ext_resource path="res://assets/OG_assets/leaf.png" type="Texture" id=7]
+[ext_resource path="res://src/Levels/stump.gd" type="Script" id=8]
+[ext_resource path="res://assets/OG_assets/grassplatforms2.png" type="Texture" id=9]
+[ext_resource path="res://assets/OG_assets/audio/cuteaf_music.wav" type="AudioStream" id=10]
+[ext_resource path="res://src/HUD.tres" type="DynamicFontData" id=11]
+[ext_resource path="res://assets/OG_assets/stump_door.png" type="Texture" id=12]
+
+[sub_resource type="TileSet" id=3]
+0/name = "grassplatforms.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 160, 576 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+2/name = "grassplatforms.png 2"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 192, 416, 96, 128 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+5/name = "leaf.png 5"
+5/texture = ExtResource( 7 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 32, 32, 416, 128 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+11/name = "grassplatforms2.png 11"
+11/texture = ExtResource( 9 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 384, 128, 288, 160 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+13/name = "grassplatforms2.png 13"
+13/texture = ExtResource( 9 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 384, 384, 64, 160 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "grassplatforms.png 14"
+14/texture = ExtResource( 2 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 384, 160, 288, 384 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "grassplatforms2.png 15"
+15/texture = ExtResource( 9 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 384, 288, 64, 96 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 71, 10 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 73.0422, 3.86694 )
+
+[sub_resource type="CapsuleShape2D" id=7]
+radius = 19.1511
+height = 765.074
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 79.2095, 9.71016 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 141.5, 10 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 127, 10 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 128.5, 10 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 79.5, 5 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 71.5, 4 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 140.826, 10 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 149.562, 9.84375 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 207, 4 )
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 91.625, 4.5 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 150, 10 )
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 130.875, 9.75 )
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 83.25, 4.5625 )
+
+[sub_resource type="SegmentShape2D" id=28]
+a = Vector2( 144, 24 )
+b = Vector2( 3, 25 )
+
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 1218.01, 212.21 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 9285, 19.5 )
+
+[sub_resource type="DynamicFont" id=29]
+size = 20
+outline_color = Color( 0.0235294, 0.0235294, 0.0235294, 1 )
+font_data = ExtResource( 11 )
+
+[sub_resource type="CapsuleShape2D" id=30]
+radius = 80.0
+height = 18.0
+
+[node name="level1" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="Sprite5" type="Sprite" parent="." index="0"]
+position = Vector2( 9878, 1177 )
+rotation = -0.070891
+scale = Vector2( 7.70673, -3.80976 )
+texture = ExtResource( 7 )
+
+[node name="Sprite4" type="Sprite" parent="." index="1"]
+position = Vector2( 2538, 2065 )
+rotation = 0.00624049
+scale = Vector2( 23.6247, 19.0372 )
+texture = ExtResource( 7 )
+
+[node name="Sprite2" type="Sprite" parent="." index="2"]
+position = Vector2( 378, 1419 )
+scale = Vector2( 17.2024, 6.65181 )
+texture = ExtResource( 7 )
+
+[node name="Sprite3" type="Sprite" parent="." index="3"]
+position = Vector2( 6296, 1311 )
+rotation = -0.0726572
+scale = Vector2( 15.322, -7.25048 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="." index="4"]
+position = Vector2( -424, 309 )
+scale = Vector2( 0.829171, 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 550.475, 1113.78 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="5"]
+offset = Vector2( 0, -800 )
+scale = Vector2( 1.5, 1.5 )
+transform = Transform2D( 1.5, 0, 0, 1.5, 0, -800 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+motion_scale = Vector2( 0.2, 0.2 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
+position = Vector2( -123.333, 362.667 )
+scale = Vector2( 1.45461, 1.47917 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1370, 768 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="1"]
+position = Vector2( 1862.41, 365.335 )
+scale = Vector2( 1.45461, 1.47917 )
+texture = ExtResource( 6 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 1370, 768 )
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="2"]
+position = Vector2( 3852.41, 365.335 )
+scale = Vector2( 1.45461, 1.47917 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1370, 768 )
+
+[node name="Sprite4" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="3"]
+position = Vector2( 5841.75, 366.001 )
+scale = Vector2( 1.45461, 1.47917 )
+texture = ExtResource( 6 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 1370, 768 )
+
+[node name="Sprite5" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="4"]
+position = Vector2( 7829.07, 365.335 )
+scale = Vector2( 1.45461, 1.47917 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1370, 768 )
+
+[node name="Fruit6" parent="." index="6" instance=ExtResource( 5 )]
+position = Vector2( 9281, 288 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Fruit5" parent="." index="7" instance=ExtResource( 5 )]
+position = Vector2( 4520, 38 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Fruit2" parent="." index="8" instance=ExtResource( 5 )]
+position = Vector2( 2812, 1024 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Fruit" parent="." index="9" instance=ExtResource( 5 )]
+position = Vector2( 1232, 611 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Fruit3" parent="." index="10" instance=ExtResource( 5 )]
+position = Vector2( 3672, 754 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Fruit4" parent="." index="11" instance=ExtResource( 5 )]
+position = Vector2( 6996, 318 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Organ6" parent="." index="12" instance=ExtResource( 4 )]
+position = Vector2( 9798, 454 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Organ2" parent="." index="13" instance=ExtResource( 4 )]
+position = Vector2( 3999, 1006 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Organ5" parent="." index="14" instance=ExtResource( 4 )]
+position = Vector2( 6224, -47 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Organ" parent="." index="15" instance=ExtResource( 4 )]
+position = Vector2( 1666, 987 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Organ3" parent="." index="16" instance=ExtResource( 4 )]
+position = Vector2( 6763, 621 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Organ4" parent="." index="17" instance=ExtResource( 4 )]
+position = Vector2( 8041, 367 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Platforms" type="TileMap" parent="." index="18"]
+position = Vector2( -1, -1 )
+tile_set = SubResource( 3 )
+format = 1
+tile_data = PoolIntArray( 393323, 536870926, 0, 524278, 0, 0, 458793, 6, 0, 458847, 5, 0, 458865, 5, 0, 458875, 5, 0, 524354, 536870917, 0, 524379, 11, 0, 524400, 0, 0, 524410, 0, 0, 589865, 6, 0, 589894, 536870923, 0, 655376, 536870923, 0, 655380, 11, 0, 655391, 10, 0, 655419, 5, 0, 655436, 5, 0, 655451, 1073741839, 0, 655529, 536870912, 0, 720913, 10, 0, 720937, 6, 0, 720968, 11, 0, 720983, 536870926, 0, 720987, 1073741839, 0, 720998, 536870917, 0, 721030, 536870926, 0, 851959, 2, 0, 786452, 15, 0, 786457, 536870917, 0, 786463, 8, 0, 786487, 5, 0, 786523, 1073741839, 0, 851979, 536870926, 0, 851985, 8, 0, 851988, 15, 0, 852006, 536870913, 0, 852037, 14, 0, 852059, 15, 0, 852076, 15, 0, 983031, 2, 0, 917521, 8, 0, 917524, 15, 0, 917534, 14, 0, 917535, 8, 0, 917556, 5, 0, 917595, 15, 0, 917612, 15, 0, 983057, 8, 0, 983060, 15, 0, 983071, 8, 0, 983088, 11, 0, 983131, 13, 0, 983148, 15, 0, 1114103, 2, 0, 1048593, 8, 0, 1048596, 13, 0, 1048607, 8, 0, 1048684, 13, 0, 1114129, 9, 0, 1114132, 536870924, 0, 1114143, 9, 0, 1179668, 536870924, 0, 1245204, 536870924, 0, 1310740, 536870924, 0 )
+
+[node name="Main_player" parent="." index="19"]
+position = Vector2( 180, 925 )
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Main_player" index="2"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="Platform_collision" type="StaticBody2D" parent="." index="20"]
+
+[node name="vines" type="StaticBody2D" parent="Platform_collision" index="0"]
+position = Vector2( 800, 805 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform_collision/vines" index="0"]
+position = Vector2( 50, 44 )
+rotation = -0.0139626
+shape = SubResource( 12 )
+one_way_collision = true
+one_way_collision_margin = 6.2
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Platform_collision/vines" index="1"]
+position = Vector2( 1260, 107 )
+rotation = -0.0296706
+shape = SubResource( 15 )
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Platform_collision/vines" index="2"]
+position = Vector2( -1336, -43 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Platform_collision/vines" index="3"]
+position = Vector2( 2819.37, 91.8515 )
+rotation = -1.49051
+shape = SubResource( 18 )
+one_way_collision = true
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Platform_collision/vines" index="4"]
+position = Vector2( 3173, -118 )
+shape = SubResource( 20 )
+one_way_collision = true
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Platform_collision/vines" index="5"]
+position = Vector2( 2962, 20 )
+shape = SubResource( 21 )
+one_way_collision = true
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Platform_collision/vines" index="6"]
+position = Vector2( 2696, 162 )
+shape = SubResource( 19 )
+one_way_collision = true
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Platform_collision/vines" index="7"]
+position = Vector2( 3752, 43 )
+shape = SubResource( 22 )
+one_way_collision = true
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Platform_collision/vines" index="8"]
+position = Vector2( 2405.5, 198 )
+shape = SubResource( 16 )
+one_way_collision = true
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Platform_collision/vines" index="9"]
+position = Vector2( 4257, -107 )
+scale = Vector2( 1.09, 1.094 )
+shape = SubResource( 24 )
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Platform_collision/vines" index="10"]
+position = Vector2( 5479.44, -301.688 )
+shape = SubResource( 13 )
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Platform_collision/vines" index="11"]
+position = Vector2( 494, -116 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Platform_collision/vines" index="12"]
+position = Vector2( 3941.38, -51.5 )
+shape = SubResource( 23 )
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Platform_collision/vines" index="13"]
+position = Vector2( 1022, 16 )
+shape = SubResource( 17 )
+one_way_collision = true
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Platform_collision/vines" index="14"]
+position = Vector2( 3650.12, -235.25 )
+shape = SubResource( 25 )
+one_way_collision = true
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Platform_collision/vines" index="15"]
+position = Vector2( 3830, -181 )
+shape = SubResource( 26 )
+one_way_collision = true
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Platform_collision/vines" index="16"]
+position = Vector2( 6108, -425 )
+shape = SubResource( 28 )
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Platform_collision" index="1"]
+position = Vector2( 10919.9, 123.025 )
+rotation = -1.56731
+shape = SubResource( 27 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform_collision" index="2"]
+position = Vector2( 1412, 1086 )
+shape = SubResource( 1 )
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Platform_collision" index="3"]
+position = Vector2( 8654, 697 )
+shape = SubResource( 28 )
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Platform_collision" index="4"]
+position = Vector2( 5619, 694 )
+shape = SubResource( 28 )
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Platform_collision" index="5"]
+position = Vector2( 5873, 537 )
+shape = SubResource( 28 )
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Platform_collision" index="6"]
+position = Vector2( 7421, 506 )
+shape = SubResource( 13 )
+one_way_collision = true
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Platform_collision" index="7"]
+position = Vector2( 8067, 508 )
+shape = SubResource( 13 )
+one_way_collision = true
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Platform_collision" index="8"]
+position = Vector2( 6737, 755 )
+shape = SubResource( 13 )
+one_way_collision = true
+
+[node name="Camera2D" type="Camera2D" parent="." index="21"]
+position = Vector2( 180, 925 )
+offset = Vector2( 0, -200 )
+current = true
+limit_left = -600
+limit_top = -1000
+limit_right = 11000
+limit_bottom = 1400
+smoothing_enabled = true
+offset_h = 0.2
+offset_v = 0.2
+editor_draw_limits = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="22"]
+stream = ExtResource( 10 )
+autoplay = true
+max_distance = 1e+12
+
+[node name="Text_box" type="ColorRect" parent="." index="23"]
+margin_left = -355.0
+margin_top = 555.0
+margin_right = 645.0
+margin_bottom = 755.0
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 3
+color = Color( 0.85098, 0.839216, 0.85098, 0.678431 )
+
+[node name="Label" type="Label" parent="." index="24"]
+margin_left = -355.0
+margin_top = 599.0
+margin_right = 639.0
+margin_bottom = 692.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 29 )
+text = "You've recently felt a chill in the air, winter will be here soon. 
+You need to make sure you have enough stored up to survive the winter.
+
+Remember: Life is a matter of choices, and every choice you make makes you ~ John C. Maxwell"
+align = 1
+
+[node name="Timer" type="Timer" parent="." index="25"]
+wait_time = 5.0
+autostart = true
+
+[node name="stump" type="Area2D" parent="." index="26"]
+show_behind_parent = true
+position = Vector2( 8115, 1766 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SpringOut" type="Sprite" parent="stump" index="0"]
+position = Vector2( 2203, -950 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump" index="1"]
+position = Vector2( 2175, -809 )
+shape = SubResource( 30 )
+
+[connection signal="item_collected" from="Fruit6" to="Fruit6" method="_on_Fruit_item_collected"]
+[connection signal="item_collected" from="Fruit5" to="Fruit5" method="_on_Fruit_item_collected"]
+[connection signal="item_collected" from="Fruit2" to="Fruit2" method="_on_Fruit_item_collected"]
+[connection signal="item_collected" from="Fruit" to="Fruit" method="_on_Fruit_item_collected"]
+[connection signal="item_collected" from="Fruit3" to="Fruit3" method="_on_Fruit_item_collected"]
+[connection signal="item_collected" from="Fruit4" to="Fruit4" method="_on_Fruit_item_collected"]
+[connection signal="item_collected" from="Organ6" to="Organ6" method="_on_Organ_item_collected"]
+[connection signal="item_collected" from="Organ2" to="Organ2" method="_on_Organ_item_collected"]
+[connection signal="item_collected" from="Organ5" to="Organ5" method="_on_Organ_item_collected"]
+[connection signal="item_collected" from="Organ" to="Organ" method="_on_Organ_item_collected"]
+[connection signal="item_collected" from="Organ3" to="Organ3" method="_on_Organ_item_collected"]
+[connection signal="item_collected" from="Organ4" to="Organ4" method="_on_Organ_item_collected"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="stump" to="stump" method="_on_stump_body_entered"]
